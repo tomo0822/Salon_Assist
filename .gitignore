@@ -8,11 +8,14 @@
 # ========================
 node_modules/
 gulp/node_modules/
+package-lock.json
 
 # ========================
 # ビルド成果物
+# dist 内の HTML 以外は無視
 # ========================
-dist/
+dist/*
+!dist/**/*.html
 
 # ========================
 # OSやIDEのゴミファイル
