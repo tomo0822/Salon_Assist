@@ -1,14 +1,26 @@
-gulp/node_modules/
-gulp/package-lock.json
-dist/css/styles.css
-dist/css/styles.css.map
-dist/images/
-.vscode
-# VSCode設定など
+# ========================
+# VSCode設定
+# ========================
 .vscode/
+
+# ========================
 # Node関連
+# ========================
 node_modules/
-# Macなどの隠しファイル
+gulp/node_modules/
+
+# ========================
+# ビルド成果物
+# ========================
+dist/
+
+# ========================
+# OSやIDEのゴミファイル
+# ========================
 .DS_Store
+Thumbs.db
+
+# ========================
 # ログや一時ファイル
+# ========================
 *.log
