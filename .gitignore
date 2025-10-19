@@ -1,0 +1,14 @@
+gulp/node_modules/
+gulp/package-lock.json
+dist/css/styles.css
+dist/css/styles.css.map
+dist/images/
+.vscode
+# VSCode設定など
+.vscode/
+# Node関連
+node_modules/
+# Macなどの隠しファイル
+.DS_Store
+# ログや一時ファイル
+*.log
