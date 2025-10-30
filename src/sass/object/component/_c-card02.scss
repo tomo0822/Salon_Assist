@@ -1,0 +1,197 @@
+@use "global" as *;
+
+.c-card02 {
+  background: $black3;
+  padding: myrem(1);
+  clip-path: polygon(
+    0 15px,
+    /* 左上 */ 15px 0,
+    /* 左上 */ calc(100% - 15px) 0,
+    /* 右上 */ 100% 15px,
+    /* 右上 */ 100% calc(100% - 15px),
+    /* 右下 */ calc(100% - 15px) 100%,
+    /* 右下 */ 15px 100%,
+    /* 左下 */ 0 calc(100% - 15px) /* 左下 */
+    );
+    max-width: myrem(600);
+    margin: 0 auto;
+    @include mq(md) {
+      clip-path: polygon(
+    0 25px,
+    /* 左上 */ 25px 0,
+    /* 左上 */ calc(100% - 25px) 0,
+    /* 右上 */ 100% 25px,
+    /* 右上 */ 100% calc(100% - 25px),
+    /* 右下 */ calc(100% - 25px) 100%,
+    /* 右下 */ 25px 100%,
+    /* 左下 */ 0 calc(100% - 25px) /* 左下 */
+    );
+    }
+  }
+  
+  .c-card02__inner {
+    background: $white;
+    padding: myrem(15) myrem(15) myrem(32) myrem(15);
+    clip-path: polygon(
+    0 14.5px,
+    /* 左上 */ 14.5px 0,
+    /* 左上 */ calc(100% - 14.5px) 0,
+    /* 右上 */ 100% 15px,
+    /* 右上 */ 100% calc(100% - 14.5px),
+    /* 右下 */ calc(100% - 14.5px) 100%,
+    /* 右下 */ 14.5px 100%,
+    /* 左下 */ 0 calc(100% - 14.5px) /* 左下 */
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mq(md) {
+      padding: myrem(13) myrem(15) myrem(26) myrem(15);
+      clip-path: polygon(
+    0 24.5px,
+    /* 左上 */ 24.5px 0,
+    /* 左上 */ calc(100% - 24.5px) 0,
+    /* 右上 */ 100% 24.5px,
+    /* 右上 */ 100% calc(100% - 24.5px),
+    /* 右下 */ calc(100% - 24.5px) 100%,
+    /* 右下 */ 24.5px 100%,
+    /* 左下 */ 0 calc(100% - 24.5px) /* 左下 */
+    );
+    }
+}
+
+.c-card02__title {
+  font-size: myrem(18);
+  font-weight: 500;
+  margin-top: myrem(6);
+  margin-left: myrem(2);
+  text-align: center;
+  @include mq(md) {
+    font-size: myrem(20);
+    margin-top: 0;
+    margin-left: myrem(-7);
+  }
+}
+
+.c-card02__title--large {
+  font-size: myrem(24);
+  @include mq(md) {
+    font-size: myrem(28);
+  }
+}
+
+.c-card02__strong {
+  font-size: myrem(28);
+  font-family: $font-title;
+  font-weight: 600;
+  margin-left: myrem(-14);
+  margin-right: myrem(4);
+  @include mq(md) {
+    font-size: myrem(30);
+    margin-left: myrem(-11);
+    margin-right: myrem(2);
+  }
+}
+
+.c-card02__strong--inversion {
+  transform: scaleX(-1);
+  display: inline-block;
+  margin-left: 0;
+  margin-right: myrem(-7);
+  @include mq(md) {
+    margin-left: myrem(-4);
+  }
+}
+
+.c-card02__list {
+  margin: myrem(14) auto 0 auto;
+  width: fit-content;
+  @include mq(md) {
+    margin: myrem(12) auto 0 auto;
+  }
+}
+
+.c-card02__item {
+  display: flex;
+  align-items: flex-start;
+  margin-top: myrem(15);
+  @include mq(md) {
+    margin-top: myrem(8);
+  }
+}
+
+.c-card02__item:first-of-type {
+  margin-top: 0;
+  @include mq(md) {
+  }
+}
+
+.c-card02__item:nth-of-type(4),
+.c-card02__item:last-of-type {
+  margin-top: myrem(19);
+  @include mq(md) {
+    margin-top: myrem(8);
+  }
+}
+
+.c-card02__text-wrapper {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  gap: myrem(9);
+  @include mq(md) {
+    gap: myrem(12);
+  }
+}
+
+.c-card02__checkmark {
+  display: block;
+  width: myrem(16);
+  height: myrem(16);
+  border: 1px solid $black2;
+  position: relative;
+  top: myrem(4);
+  @include mq(md) {
+    width: myrem(20);
+    height: myrem(20);
+    top: myrem(5);
+    left: myrem(2);
+  }
+}
+
+.c-card02__checkmark::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: myrem(17);
+  height: myrem(17);
+  background-image: url(../images/fv/sp/checkmark-sp.png);
+  background-size: cover;
+  top: myrem(1);
+  left: myrem(2);
+  @include mq(md) {
+    width: myrem(21);
+    height: myrem(21);
+    background-image: url(../images/fv/pc/checkmark-pc.png);
+    top: myrem(-3);
+  }
+}
+
+.c-card02__text {
+  font-size: myrem(16);
+  font-weight: 500;
+  line-height: calc(22/ 16);
+  flex: 1;
+  @include mq(md) {
+    margin-top: myrem(2);
+  }
+}
+
+.c-card02__text-marker {
+  background: linear-gradient(transparent 50%, $pink3 80%);
+  @include mq(md) {
+    
+  }
+}
+
+

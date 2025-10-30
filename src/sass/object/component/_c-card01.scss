@@ -1,0 +1,165 @@
+@use "global" as *;
+
+.c-card01 {
+  aspect-ratio: 108 / 94;
+  width: myrem(108);
+  background-color: $pink1;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  @include mq(md) {
+    aspect-ratio: 136 / 119;
+    width: myrem(136);
+  }
+}
+
+// カード内テキスト
+.c-card01__text {
+  font-size: myrem(13);
+  line-height: calc(14 / 13);
+  letter-spacing: -.01em;
+  color: $white;
+  margin-top: myrem(7);
+  @include mq(md) {
+    font-size: myrem(16);
+    line-height: calc(18 / 16);
+    letter-spacing: .02em;
+    margin-top: myrem(8);
+  }
+}
+
+.c-card01__text--large {
+  font-size: myrem(14);
+  @include mq(md) {
+    font-size: myrem(17);
+  }
+}
+.c-card01__text--small {
+  font-size: myrem(12);
+  letter-spacing: -.1em;
+  @include mq(md) {
+    font-size: myrem(15);
+  }
+}
+
+// 左カード内テキスト　最初の行
+.c-card01__text:first-of-type {
+  margin-top: myrem(21);
+  @include mq(md) {
+    margin-top: myrem(26);
+  }
+}
+
+// 中央カード　最初の行
+.c-card01--center .c-card01__text:first-of-type {
+  margin-top: myrem(16);
+  @include mq(md) {
+    margin-top: myrem(18);
+  }
+}
+
+// 中央カード内テキスト　2行目
+.c-card01--center .c-card01__text:nth-of-type(2) {
+  margin-top: myrem(2);
+  @include mq(md) {
+    margin-top: myrem(3);
+  }
+}
+
+// 中央カード内テキスト　3行目
+.c-card01--center .c-card01__text:nth-of-type(3) {
+  margin-top: 0;
+  @include mq(md) {
+    
+  }
+}
+
+// 右カード内テキスト　最初の行
+.c-card01--right .c-card01__text:first-of-type {
+  margin-top: myrem(23);
+  @include mq(md) {
+    margin-top: myrem(28);
+  }
+}
+
+// 右カード内テキスト　2行目
+.c-card01--right .c-card01__text:nth-of-type(2) {
+  margin-top: myrem(4);
+  @include mq(md) {
+    margin-top: myrem(6);
+  }
+}
+
+// 右カード内テキスト　3行目
+.c-card01--right .c-card01__text:nth-of-type(3) {
+  margin-top: myrem(5);
+  @include mq(md) {
+    margin-top: myrem(7);
+  }
+}
+
+// 黄色テキスト
+.c-card01__text-yellow {
+  font-size: myrem(17);
+  font-weight: 900;
+  line-height: calc(14 / 17);
+  letter-spacing: -.075em;
+  color: $yellow2;
+  @include mq(md) {
+    font-size: myrem(22);
+  }
+}
+
+// 縦書きテキスト
+.c-card01__text--column {
+  font-size: myrem(12);
+  font-weight: 900;
+  line-height: calc(14 / 12);
+  letter-spacing: .005em;
+  color: $yellow2;
+  writing-mode: vertical-rl;
+  @include mq(md) {
+    font-size: myrem(15);
+    position: relative;
+    left: myrem(4);
+  }
+}
+
+// 大きい黄色テキスト
+.c-card01__text-yellow--large {
+  font-size: myrem(33);
+  font-weight: 700;
+  line-height: calc(28 / 33);
+  letter-spacing: -.005em;
+  color: $yellow2;
+  @include mq(md) {
+    font-size: myrem(42);
+    position: relative;
+    left: myrem(2);
+  }
+}
+
+// 小さい黄色テキスト
+.c-card01__text-yellow--small {
+  font-size: myrem(15);
+  font-weight: 900;
+  line-height: calc(28 / 15);
+  letter-spacing: 0;
+  color: $yellow2;
+  margin-bottom: myrem(2);
+  position: relative;
+  top: myrem(-1); // 少し上にずらす
+  @include mq(md) {
+    font-size: myrem(20);
+    top: myrem(-2);
+  }
+}
+
+// 右カード　黄色テキスト
+.c-card01--right .c-card01__text-yellow {
+  font-size: myrem(19);
+  @include mq(md) {
+    font-size: myrem(24);
+  }
+}

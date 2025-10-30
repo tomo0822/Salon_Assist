@@ -2,19 +2,37 @@
 @use "sass:map";
 
 // インナー幅
-$innerWidth: 1024px;
+$innerWidth: 1000px;
 
 // 余白
-$padding-pc: 25px;
-$padding-sp: 20px;
+$padding-pc: 20px;
+$padding-sp: 15px;
 
 // フォント
-$font-main: "";
-$font-sub: "";
+$font-main: "Zen Maru Gothic", sans-serif;
+$font-sub: "Noto Sans JP", sans-serif;
+$font-title: "Shippori Mincho", serif;
+$font-fv-title: "Montserrat", sans-serif;
 
 // 色指定
-$black: #333;
+$black: #000;
+$black2: #3e3b35;
+$black3: #737373;
 $white: #fff;
+$gray1: #f5f5f5;
+$gray2: #b2b2b2;
+$pink1: #cc5c89;
+$pink2: #984b6c;
+$pink3: #fbebed;
+$pink4: #c6618c;
+$pink5: #b03f74;
+$pink-fv: #fae4e7;
+$yellow1: #ccaf3a;
+$yellow2: #fcee7b;
+$lightblue1: #81c7c7;
+$lightblue2: #d8f5f5;
+$lightblue3: #66c7c7;
+$green1: #00b900;
 
 // ブレイクポイント
 $breakpoints: (
