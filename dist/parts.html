@@ -1,36 +1,167 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <meta name="format-detection" content="telephone=no" />
-  <!-- meta情報 -->
-  <title>タイトル</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <!-- ogp -->
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- meta情報 -->
+    <title>タイトル</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- ogp -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
 
-  <meta name="robots" content="noindex, nofollow" /> <!-- 検索エンジンにインデックスしないよう指示 -->
-  <meta name="googlebot" content="noindex, nofollow" /> <!-- Googleのクローラーにインデックスしないよう指示 -->
-  <meta name="msnbot" content="noindex, nofollow" /> <!-- Bingのクローラーにインデックスしないよう指示 -->
-  <meta name="slurp" content="noindex, nofollow" /> <!-- Yahooのクローラーにインデックスしないよう指示 -->
-  <!-- ファビコン -->
-  <link rel="icon" href="" />
-  <!-- css -->
-  <link rel="stylesheet" href="./css/styles.min.css">
-  <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script defer src="./js/script.min.js"></script>
-</head>
-<body>
-  <div class="l-inner">
-    <p class="p-test">パーツページ</p>
-  </div>
-</body>
+    <meta name="robots" content="noindex, nofollow" />
+    <!-- 検索エンジンにインデックスしないよう指示 -->
+    <meta name="googlebot" content="noindex, nofollow" />
+    <!-- Googleのクローラーにインデックスしないよう指示 -->
+    <meta name="msnbot" content="noindex, nofollow" />
+    <!-- Bingのクローラーにインデックスしないよう指示 -->
+    <meta name="slurp" content="noindex, nofollow" />
+    <!-- Yahooのクローラーにインデックスしないよう指示 -->
+    <!-- ファビコン -->
+    <link rel="icon" href="" />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/styles.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="./js/script.min.js"></script>
+  </head>
+  <body>
+    <div class="l-inner p-parts">
+      <!-- c-card01 -->
+      <!-- left -->
+      <ul class="p-card01">
+        <li class="c-card01">
+          <div class="c-card01__text-wrapper">
+            <p class="c-card01__text">
+              <span class="c-card01__text-yellow">皮膚科医</span>が
+            </p>
+            <p class="c-card01__text">
+              <span class="c-card01__text-yellow">監修</span>する
+            </p>
+            <p class="c-card01__text c-card01__text--large">医療脱毛</p>
+          </div>
+        </li>
+        <!-- center -->
+        <li class="c-card01 c-card01--center">
+          <div class="c-card01__text-wrapper">
+            <p class="c-card01__text">全身脱毛</p>
+            <p class="c-card01__text">
+              <span class="c-card01__text--column">最短</span>
+              <span class="c-card01__text-yellow--large">90</span>
+              <span class="c-card01__text-yellow--small">分</span>
+            </p>
+            <p class="c-card01__text c-card01__text--large">で完了</p>
+          </div>
+        </li>
+        <!-- right -->
+        <li class="c-card01 c-card01--right">
+          <div class="c-card01__text-wrapper">
+            <p class="c-card01__text c-card01__text--small">医療脱毛なのに</p>
+            <p class="c-card01__text">
+              <span class="c-card01__text-yellow">痛みが</span>
+            </p>
+            <p class="c-card01__text">
+              <span class="c-card01__text-yellow">少ない</span>
+            </p>
+          </div>
+        </li>
+      </ul>
+
+      <!-- c-card02 -->
+      <div class="c-card02">
+        <div class="c-card02__inner">
+          <p class="c-card02__title">
+            こんな<span class="c-card02__strong c-card02__strong--inversion"
+              >”</span
+            >
+            <span class="c-card02__title--large">お悩み</span>
+            <span class="c-card02__strong">”</span>ありませんか？
+          </p>
+          <ul class="c-card02__list">
+            <li class="c-card02__item">
+              <div class="c-card02__text-wrapper">
+                <span class="c-card02__checkmark"></span>
+                <p class="c-card02__text">
+                  安価の脱毛器を試したけど<span class="c-card02__text-marker"
+                    >効果が得られなかった</span
+                  >
+                </p>
+              </div>
+            </li>
+            <li class="c-card02__item">
+              <div class="c-card02__text-wrapper">
+                <span class="c-card02__checkmark"></span>
+                <p class="c-card02__text">
+                  外国製の脱毛器を購入したけど、<span
+                    class="c-card02__text-marker"
+                    >すぐ壊れてしまった</span
+                  >
+                </p>
+              </div>
+            </li>
+            <li class="c-card02__item">
+              <div class="c-card02__text-wrapper">
+                <span class="c-card02__checkmark"></span>
+                <p class="c-card02__text">
+                  カミソリでのお手入れを<span class="c-card02__text-marker"
+                    >面倒に感じる</span
+                  >
+                </p>
+              </div>
+            </li>
+            <li class="c-card02__item">
+              <div class="c-card02__text-wrapper">
+                <span class="c-card02__checkmark"></span>
+                <p class="c-card02__text">
+                  エステ脱毛は高いし<span class="c-card02__text-marker"
+                    >予約が面倒</span
+                  >
+                </p>
+              </div>
+            </li>
+            <li class="c-card02__item">
+              <div class="c-card02__text-wrapper">
+                <span class="c-card02__checkmark"></span>
+                <p class="c-card02__text">
+                  家の処理で<span class="c-card02__text-marker"
+                    >肌が荒れたりかぶれたりする</span
+                  >
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- c-graph01 -->
+      <div class="c-graph01 c-graph01--small">
+        <div class="c-graph01__content">
+          <p class="c-graph01__label">
+            <span class="c-graph01__label--strong">1</span>回目の施術で
+          </p>
+          <p class="c-graph01__number-wrapper">
+            <span class="c-graph01__number">89</span>
+            <span class="c-graph01__number--percent">%</span>
+          </p>
+          <p class="c-graph01__text-wrapper">
+            <span>の方が<br></span>
+            <span class="c-graph01__text">効果を実感！</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
