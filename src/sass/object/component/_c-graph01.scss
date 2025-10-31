@@ -1,0 +1,165 @@
+@use "global" as *;
+
+.c-graph01 {
+  width: myrem(190);
+  height: myrem(190);
+  border-radius: 50%;
+  background-image: conic-gradient($pink1 0% 91%, $pink2 91% 100%);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mq(md) {
+    width: myrem(245);
+    height: myrem(245);
+  }
+}
+
+.c-graph01--second {
+  background-image: conic-gradient($pink1 0% 95%, $pink2 95% 100%);
+  @include mq(md) {
+    width: myrem(273);
+    height: myrem(273);
+  }
+}
+
+.c-graph01--small {
+  @include mq(md) {
+  }
+}
+
+.c-graph01__content {
+  margin-top: myrem(-5);
+  @include mq(md) {
+  }
+}
+
+.c-graph01__label {
+  font-size: myrem(11);
+  font-weight: 900;
+  background: $white;
+  position: relative;
+  top: myrem(2);
+  display: inline;
+  margin-left: myrem(-3);
+  padding-inline: myrem(9) myrem(10);
+  @include mq(md) {
+    font-size: myrem(14);
+  }
+}
+
+.c-graph01--second .c-graph01__label {
+  font-size: myrem(12);
+  top: myrem(10);
+  left: myrem(6);
+  @include mq(md) {
+    font-size: myrem(17);
+  }
+}
+
+.c-graph01__label--strong {
+  font-size: myrem(21);
+  text-shadow: 2px 2px 2px $white, -2px -2px 2px $white, -2px 2px 2px $white,
+    2px -2px 2px $white, 2px 0 2px $white, -2px 0 2px $white, 0 2px 2px $white,
+    0 -2px 2px $white;
+    @include mq(md) {
+      font-size: myrem(27);
+  }
+}
+
+.c-graph01--second .c-graph01__label--strong {
+  font-size: myrem(34);
+  @include mq(md) {
+  }
+}
+
+.c-graph01__number-wrapper {
+  font-size: myrem(61);
+  line-height: 1;
+  font-weight: 900;
+  text-shadow: 2px 2px 2px $white, -2px -2px 2px $white, -2px 2px 2px $white,
+    2px -2px 2px $white, 2px 0 2px $white, -2px 0 2px $white, 0 2px 2px $white,
+    0 -2px 2px $white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  @include mq(md) {
+    font-size: myrem(78);
+    text-shadow: 3px 3px 3px $white, -3px -3px 3px $white, -3px 3px 3px $white,
+        3px -3px 3px $white, 3px 0 3px $white, -3px 0 3px $white, 0 3px 3px $white,
+        0 -3px 3px $white;
+  }
+}
+
+.c-graph01__number-wrapper--second {
+  color: $yellow3;
+  @include mq(md) {
+  }
+}
+
+.c-graph01--second .c-graph01__number-wrapper {
+  @include mq(md) {
+    font-size: myrem(88);
+  }
+}
+
+.c-graph01__number {
+  @include mq(md) {
+  }
+}
+
+.c-graph01--second .c-graph01__number {
+  margin-top: myrem(8);
+  margin-left: myrem(-7);
+  @include mq(md) {
+  }
+}
+
+.c-graph01__number--percent {
+  font-size: myrem(31);
+  font-weight: 900;
+  position: relative;
+  top: myrem(-5);
+  @include mq(md) {
+    font-size: myrem(40);
+  }
+}
+
+.c-graph01--second .c-graph01__number--percent {
+  @include mq(md) {
+    font-size: myrem(49);
+  }
+}
+
+.c-graph01__text {
+  font-weight: 900;
+  color: $white;
+  @include mq(md) {
+  }
+}
+
+.c-graph01__text--small {
+  font-size: myrem(12);
+  display: block;
+  text-align: right;
+  @include mq(md) {
+    font-size: myrem(15);
+  }
+}
+
+.c-graph01__text--highlight {
+  font-size: myrem(21);
+  position: relative;
+  top: myrem(-2);
+  left: myrem(3);
+  @include mq(md) {
+    font-size: myrem(27);
+  }
+}
+
+.c-graph01--second .c-graph01__text--highlight {
+  
+  @include mq(md) {
+    font-size: myrem(29);
+  }
+}
