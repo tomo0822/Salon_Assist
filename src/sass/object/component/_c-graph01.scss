@@ -45,6 +45,9 @@
   padding-inline: myrem(9) myrem(10);
   @include mq(md) {
     font-size: myrem(14);
+    margin-left: myrem(-3);
+    padding-inline: myrem(10) myrem(13);
+    top: myrem(7);
   }
 }
 
@@ -54,6 +57,8 @@
   left: myrem(6);
   @include mq(md) {
     font-size: myrem(17);
+    margin-left: myrem(-6);
+    padding-inline: myrem(13) myrem(16);
   }
 }
 
@@ -64,12 +69,15 @@
     0 -2px 2px $white;
     @include mq(md) {
       font-size: myrem(27);
+      letter-spacing: -.1em;
+      margin-right: myrem(2);
+    }
   }
-}
-
-.c-graph01--second .c-graph01__label--strong {
-  font-size: myrem(34);
-  @include mq(md) {
+  
+  .c-graph01--second .c-graph01__label--strong {
+    @include mq(md) {
+      font-size: myrem(34);
+      margin-right: myrem(6);
   }
 }
 
@@ -105,6 +113,7 @@
 
 .c-graph01__number {
   @include mq(md) {
+    margin-top: myrem(5);
   }
 }
 

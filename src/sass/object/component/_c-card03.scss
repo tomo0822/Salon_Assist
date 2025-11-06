@@ -1,0 +1,198 @@
+@use "global" as *;
+
+.c-card03 {
+  position: relative;
+  z-index: 1;
+  margin-top: myrem(40);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.c-card03:first-of-type {
+  margin-top: 0;
+  @include mq(md) {
+    
+  }
+}
+
+.c-card03:nth-of-type(4) {
+  margin-top: myrem(44);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.c-card03__image-sp {
+  width: calc(250 / 315 *100%);
+  margin: 0 auto;
+  @include mq(md) {
+    
+  }
+}
+
+.c-card03__content {
+  position: relative;
+  border: 4px double $pink6;
+  margin-top: myrem(12);
+  padding: myrem(15) myrem(7) myrem(14) myrem(9);
+  @include mq(md) {
+    border: 6px double $pink6;
+    display: flex;
+    gap: myrem(20);
+    margin-top: 0;
+    padding: myrem(26) myrem(14) myrem(19) myrem(17);
+  }
+}
+
+.c-card03:nth-of-type(even) .c-card03__content {
+
+  @include mq(md) {
+    padding: myrem(26) myrem(14) myrem(19) myrem(15);
+  }
+}
+
+.c-card03__content::before {
+  content: "";
+  display: block;
+  width: myrem(123);
+  height: myrem(4);
+  background: $white;
+  border-top: none;
+  border-bottom: none;
+  border-right: 1px solid $pink6;
+  border-left: 1px solid $pink6;
+  position: absolute;
+  top: myrem(-4);
+  @include mq(md) {
+    width: myrem(202);
+    height: myrem(6);
+    border-right: 2px solid $pink6;
+    border-left: 2px solid $pink6;
+    top: myrem(-6);
+  }
+}
+
+.c-card03__content-wrapper {
+
+  @include mq(md) {
+    flex: 1;
+  }
+}
+
+.c-card03:nth-of-type(odd) .c-card03__content::before {
+  left: myrem(10);
+  @include mq(md) {
+    left: myrem(15);
+  }
+}
+
+.c-card03:nth-of-type(even) .c-card03__content::before {
+  right: myrem(12);
+  @include mq(md) {
+    left: myrem(15);
+  }
+}
+
+.c-card03__title {
+  font-size: myrem(12);
+  font-family: $font-title;
+  letter-spacing: 0;
+  position: absolute;
+  top: myrem(-61);
+  @include mq(md) {
+    font-size: myrem(19);
+    top: myrem(-91);
+  }
+}
+
+.c-card03:nth-of-type(odd) .c-card03__title {
+  left: myrem(16);
+  @include mq(md) {
+    left: myrem(30);
+  }
+}
+
+.c-card03:nth-of-type(even) .c-card03__title {
+  top: myrem(-62);
+  right: myrem(10);
+  @include mq(md) {
+    top: myrem(-90);
+    left: myrem(26);
+    right: 0;
+  }
+}
+
+.c-card03__number {
+  font-size: myrem(40);
+  font-style: italic;
+  color: $yellow1;
+  position: relative;
+  top: myrem(6);
+  @include mq(md) {
+    font-size: myrem(59);
+  }
+}
+
+.c-card03__number--large {
+  font-size: myrem(54);
+  margin-left: myrem(-7);
+  left: myrem(2);
+  @include mq(md) {
+    font-size: myrem(77);
+  }
+}
+
+.c-card03__card-title {
+  font-size: myrem(18);
+  font-weight: 900;
+  letter-spacing: .01em;
+  position: relative;
+  top: myrem(-1);
+  left: myrem(-2);
+  @include mq(md) {
+    font-size: myrem(22);
+  }
+}
+
+.c-card03:nth-of-type(4) .c-card03__card-title {
+  white-space: nowrap;
+  @include mq(md) {
+    
+  }
+}
+
+.c-card03__card-title--pink {
+  color: $pink1;
+  background: linear-gradient(transparent 50%, $pink3 80%);
+  @include mq(md) {
+    
+  }
+}
+
+.c-card03__text {
+  font-size: myrem(16);
+  line-height: 1.39;
+  letter-spacing: 0;
+  margin-top: myrem(10);
+  margin-left: myrem(-2);
+  @include mq(md) {
+    line-height: calc(23.5 / 16);
+  }
+}
+
+.c-card03__text-marker {
+  background: linear-gradient(transparent 50%, $yellow2 80%);
+  @include mq(md) {
+    
+  }
+}
+
+.c-card03__image-pc {
+
+  @include mq(md) {
+    margin-top: myrem(8);
+    position: relative;
+    left: myrem(-4);
+  }
+}

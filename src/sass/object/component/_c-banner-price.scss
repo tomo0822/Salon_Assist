@@ -1,0 +1,365 @@
+@use "global" as *;
+
+.c-banner-price {
+  text-align: center;
+  @include mq(md) {
+
+  }
+}
+
+.c-banner-price__copy {
+  font-size: myrem(16);
+  font-weight: 900;
+  margin-top: myrem(35);
+  position: relative;
+  display: inline-block;
+  @include mq(md) {
+    font-size: myrem(22);
+    margin-top: myrem(40);
+  }
+}
+
+.c-banner-price__copy::before,
+.c-banner-price__copy::after {
+  content: "";
+  display: block;
+  width: myrem(1);
+  height: myrem(16);
+  background: $black;
+  position: absolute;
+  top: myrem(6);
+  @include mq(md) {
+    
+  }
+}
+
+.c-banner-price__copy::before {
+  left: myrem(-12);
+  transform: rotate(-22deg);
+  @include mq(md) {
+    
+  }
+}
+
+.c-banner-price__copy::after {
+  right: myrem(-10);
+  transform: rotate(22deg);
+  @include mq(md) {
+    
+  }
+}
+
+.c-banner-price:first-of-type .c-banner-price__copy {
+  margin-top: 0;
+  @include mq(md) {
+
+  }
+}
+
+.c-banner-price__container {
+  position: relative;
+  @include mq(md) {
+    
+  }
+}
+
+.c-banner-price__heading {
+  background: $pink1;
+  width: fit-content;
+  padding-block: myrem(3);
+  padding-inline: myrem(70) myrem(80);
+  clip-path: polygon(0 0, 100% 0, 95% 50%, 100% 100%, 0 100%, 5% 50%);
+  position: absolute;
+  top: myrem(-20);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  margin-top: myrem(4);
+  @include mq(md) {
+    top: myrem(-35);
+  }
+}
+
+.c-banner-price__heading--lightblue {
+  background: $lightblue1;
+  @include mq(md) {
+    
+  }
+}
+
+.c-banner-price__heading-inner {
+  font-size: myrem(18);
+  letter-spacing: .03em;
+  color: $white;
+  white-space: nowrap;
+  position: relative;
+  left: myrem(6);
+  @include mq(md) {
+    font-size: myrem(40);
+  }
+}
+
+.c-banner-price__heading--lightblue .c-banner-price__heading-inner {
+  letter-spacing: .1em;
+  @include mq(md) {
+    
+  }
+}
+
+.c-banner-price__wrapper {
+  font-weight: 900;
+  border: 3px solid $pink1;
+  border-radius: myrem(15);
+  padding: myrem(44) myrem(10) myrem(10);
+  width: 100%;
+  margin-top: myrem(20);
+  @include mq(md) {
+    margin-top: myrem(36);
+    padding: myrem(44) myrem(30) 0 myrem(27);
+  }
+}
+
+.c-banner-price__wrapper--lightblue {
+  border: 3px solid $lightblue1;
+  @include mq(md) {
+    
+  }
+}
+
+.c-banner-price__inner {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(md) {
+    flex-direction: row;
+  }
+}
+
+.c-banner-price__list {
+  display: flex;
+  flex-direction: column;
+  gap: myrem(7);
+  flex: 1;
+  @include mq(md) {
+    gap: myrem(11);
+    margin-top: myrem(32);
+  }
+}
+
+.c-banner-price__block {
+
+  @include mq(md) {}
+}
+
+.c-banner-price__list-row {
+  display: flex;
+  gap: myrem(7);
+  @include mq(md) {
+
+  }
+}
+
+.c-banner-price__item {
+  font-size: myrem(14);
+  background: $pink3;
+  border-radius: 9999px;
+  width: calc((100% - (myrem(8) * 3)) / 4); 
+  padding-block: myrem(1);
+  white-space: nowrap;
+  @include mq(md) {
+    font-size: myrem(17);
+    width: calc((100% - (myrem(14) * 3)) / 4); 
+    padding-block: myrem(2);
+  }
+}
+
+.c-banner-price__list--lightblue .c-banner-price__item {
+  background: $lightblue2;
+  @include mq(md) {
+    
+  }
+}
+
+.c-banner-price__block--right {
+  
+  @include mq(md) {}
+}
+
+.c-banner-price__row {
+  display: flex;
+  gap: myrem(7);
+  margin-top: myrem(20);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.c-banner-price__col {
+  @include mq(md) {}
+}
+
+.c-banner-price__col--left {
+  margin-left: myrem(8);
+  width: myrem(66);
+  height: myrem(66);
+  background-image: url(../images/banner/sp/banner01-sp.png);
+  background-size: cover;
+  @include mq(md) {
+    width: myrem(94);
+    height: myrem(94);
+    background-image: url(../images/banner/pc/banner01-pc.png);
+    margin-left: 0;
+  }
+}
+
+.c-banner-price__course {
+  font-size: myrem(14);
+  color: $white;
+  margin-top: myrem(4);
+  margin-left: myrem(-4);
+  @include mq(md) {
+    font-size: myrem(19);
+  }
+}
+
+.c-banner-price__course--strong {
+  font-size: myrem(24);
+  @include mq(md) {
+    font-size: myrem(35);
+  }
+}
+
+.c-banner-price__course--bottom {
+  position: relative;
+  top: myrem(-6);
+  left: myrem(2);
+  @include mq(md) {
+    
+  }
+}
+
+.c-banner-price__col--right {
+
+  @include mq(md) {}
+}
+
+.c-banner-price__price {
+  font-size: myrem(54);
+  color: $pink1;
+  display: flex;
+  align-items: center;
+  margin-top: myrem(-14);
+  @include mq(md) {
+    font-size: myrem(80);
+  }
+}
+
+.c-banner-price__price--lightblue {
+  color: $lightblue3;
+  @include mq(md) {
+    
+  }
+}
+
+.c-banner-price__price--col {
+  font-size: myrem(20);
+  writing-mode: vertical-rl;
+
+  @include mq(md) {
+    font-size: myrem(30);
+  }
+}
+
+.c-banner-price__price--small {
+  font-weight: 400;
+  @include mq(md) {
+    
+  }
+}
+
+.c-banner-price__unit {
+  margin-left: myrem(23);
+  @include mq(md) {}
+}
+
+.c-banner-price__unit-tax {
+  font-size: myrem(10);
+  position: relative;
+  top: 5px;
+  @include mq(md) {
+    font-size: myrem(16);
+  }
+}
+
+.c-banner-price__unit-yen {
+  font-size: myrem(26);
+  @include mq(md) {
+    font-size: myrem(48);
+  }
+}
+
+.c-banner-price__total {
+  position: relative;
+  top: myrem(-14);
+  left: myrem(6);
+  @include mq(md) {}
+}
+
+.c-banner-price--lightblue .c-banner-price__total {
+  // left: myrem(4);
+  @include mq(md) {
+    
+  }
+}
+
+.c-banner-price__total-price {
+  font-size: myrem(22);
+
+  @include mq(md) {
+    font-size: myrem(26);
+  }
+}
+
+.c-banner-price__total-price--course {
+  font-size: myrem(16);
+
+  @include mq(md) {
+    font-size: myrem(20);
+  }
+}
+
+.c-banner-price__total-price--yen {
+  font-size: myrem(16);
+  @include mq(md) {
+    font-size: myrem(20);
+  }
+}
+
+.c-banner-price__total-price--tax {
+  font-size: myrem(12);
+  letter-spacing: .1em;
+  @include mq(md) {
+    font-size: myrem(14);
+  }
+}
+
+
+// 注釈
+.c-banner__annotation {
+  margin-top: myrem(16);
+  @include mq(md) {
+    
+  }
+}
+
+.c-banner__annotation-text {
+  font-size: myrem(13);
+  font-family: $font-sub;
+  font-weight: 400;
+  line-height: calc(21 / 13);
+  letter-spacing: 0;
+  @include mq(md) {
+    
+  }
+}
+

@@ -6,7 +6,9 @@
   padding-left: myrem(strip-unit($padding-sp));
   margin-right: auto;
   margin-left: auto;
-  background: $pink3;
+  // background: $pink3;
+  // z-index: -2;
+  position: sticky;
   @include mq(md) {
     max-width: $innerWidth + $padding-pc * 2;
     padding-right: myrem(strip-unit($padding-pc));

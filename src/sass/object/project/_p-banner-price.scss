@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.p-banner-price {
+  margin-top: myrem(21);
+  @include mq(md) {
+    padding-inline: myrem(50);
+    margin-top: myrem(50);
+  }
+}
+
+.p-banner-price__title {
+  font-size: myrem(20);
+  font-weight: 900;
+  text-align: center;
+  color: $pink1;
+  display: block;
+  width: fit-content;
+  border-top: 1.5px solid $pink1;
+  border-bottom: 1.5px solid $pink1;
+  margin: myrem(30) auto 0;
+  padding: myrem(2) myrem(52) myrem(3) myrem(52);
+  @include mq(md) {
+    font-size: myrem(38);
+    border-top: 3px solid $pink1;
+    border-bottom: 3px solid $pink1;
+    margin: myrem(30) auto 0;
+    padding: myrem(5) myrem(112) myrem(10) myrem(112);
+  }
+}
