@@ -15,7 +15,7 @@
   display: inline-block;
   @include mq(md) {
     font-size: myrem(22);
-    margin-top: myrem(40);
+    margin-top: myrem(34);
   }
 }
 
@@ -41,9 +41,23 @@
   }
 }
 
+.c-banner-price--lightblue .c-banner-price__copy::before {
+  left: myrem(-14);
+  @include mq(md) {
+    
+  }
+}
+
 .c-banner-price__copy::after {
   right: myrem(-10);
   transform: rotate(22deg);
+  @include mq(md) {
+    
+  }
+}
+
+.c-banner-price--lightblue .c-banner-price__copy::after {
+  right: myrem(-5);
   @include mq(md) {
     
   }
@@ -77,12 +91,16 @@
   margin-top: myrem(4);
   @include mq(md) {
     top: myrem(-35);
+    padding-block: myrem(4);
+    padding-inline: myrem(74) myrem(84);
   }
 }
 
 .c-banner-price__heading--lightblue {
   background: $lightblue1;
+  padding-inline: myrem(66) myrem(76);
   @include mq(md) {
+    padding-inline: myrem(68) myrem(78);
     
   }
 }
@@ -110,19 +128,20 @@
   font-weight: 900;
   border: 3px solid $pink1;
   border-radius: myrem(15);
-  padding: myrem(44) myrem(10) myrem(10);
+  padding: myrem(44) myrem(10) myrem(23) myrem(10);
   width: 100%;
   margin-top: myrem(20);
   @include mq(md) {
     margin-top: myrem(36);
-    padding: myrem(44) myrem(30) 0 myrem(27);
+    padding: myrem(44) myrem(30) myrem(18) myrem(27);
   }
 }
 
 .c-banner-price__wrapper--lightblue {
+  padding: myrem(44) myrem(10) myrem(28) myrem(10);
   border: 3px solid $lightblue1;
   @include mq(md) {
-    
+    padding: myrem(44) myrem(30) myrem(18) myrem(27);
   }
 }
 
@@ -137,39 +156,45 @@
 
 .c-banner-price__list {
   display: flex;
-  flex-direction: column;
-  gap: myrem(7);
-  flex: 1;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  gap: myrem(10) myrem(7);
   @include mq(md) {
-    gap: myrem(11);
+    gap: myrem(11) myrem(7);
     margin-top: myrem(32);
   }
 }
 
-.c-banner-price__block {
+.c-banner-price--lightblue .c-banner-price__list {
 
-  @include mq(md) {}
-}
-
-.c-banner-price__list-row {
-  display: flex;
-  gap: myrem(7);
   @include mq(md) {
-
+    margin-top: myrem(16);
   }
 }
 
 .c-banner-price__item {
   font-size: myrem(14);
-  background: $pink3;
-  border-radius: 9999px;
-  width: calc((100% - (myrem(8) * 3)) / 4); 
-  padding-block: myrem(1);
+  background: $pink7;
+  border-radius: 9999px; 
+  flex: 0 0 calc((100% - (3 * myrem(7))) / 4);
   white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @include mq(md) {
     font-size: myrem(17);
-    width: calc((100% - (myrem(14) * 3)) / 4); 
-    padding-block: myrem(2);
+    flex: 0 0 calc((100% - (3 * myrem(7))) / 4);
+    height: myrem(28);
+    padding-left: 1px;
+  }
+}
+
+.c-banner-price--lightblue .c-banner-price__item {
+
+  @include mq(md) {
+    flex: 0 0 calc((100% - (3 * myrem(7))) / 4);
+    padding-left: 0;
   }
 }
 
@@ -188,7 +213,7 @@
 .c-banner-price__row {
   display: flex;
   gap: myrem(7);
-  margin-top: myrem(20);
+  margin-top: myrem(7);
   @include mq(md) {
     margin-top: 0;
   }
@@ -199,16 +224,18 @@
 }
 
 .c-banner-price__col--left {
-  margin-left: myrem(8);
   width: myrem(66);
   height: myrem(66);
   background-image: url(../images/banner/sp/banner01-sp.png);
   background-size: cover;
+  margin-top: myrem(15);
+  margin-left: myrem(8);
   @include mq(md) {
     width: myrem(94);
     height: myrem(94);
     background-image: url(../images/banner/pc/banner01-pc.png);
-    margin-left: 0;
+    margin-top: myrem(20);
+    margin-left: myrem(11);
   }
 }
 
@@ -218,7 +245,7 @@
   margin-top: myrem(4);
   margin-left: myrem(-4);
   @include mq(md) {
-    font-size: myrem(19);
+    font-size: myrem(21);
   }
 }
 
@@ -234,12 +261,12 @@
   top: myrem(-6);
   left: myrem(2);
   @include mq(md) {
-    
+    font-size: myrem(19);
   }
 }
 
 .c-banner-price__col--right {
-
+  margin-top: myrem(13);
   @include mq(md) {}
 }
 
@@ -251,6 +278,9 @@
   margin-top: myrem(-14);
   @include mq(md) {
     font-size: myrem(80);
+    line-height: calc(90 / 80);
+    position: relative;
+    left: myrem(4);
   }
 }
 
@@ -264,9 +294,10 @@
 .c-banner-price__price--col {
   font-size: myrem(20);
   writing-mode: vertical-rl;
-
   @include mq(md) {
     font-size: myrem(30);
+    letter-spacing: .05em;
+    margin-top: myrem(8);
   }
 }
 
@@ -279,15 +310,19 @@
 
 .c-banner-price__unit {
   margin-left: myrem(23);
-  @include mq(md) {}
+  @include mq(md) {
+    margin-left: myrem(34);
+  }
 }
 
 .c-banner-price__unit-tax {
   font-size: myrem(10);
   position: relative;
-  top: 5px;
+  top: myrem(5);
+  white-space: nowrap;
   @include mq(md) {
     font-size: myrem(16);
+    top: myrem(1);
   }
 }
 
@@ -299,14 +334,17 @@
 }
 
 .c-banner-price__total {
-  position: relative;
-  top: myrem(-14);
-  left: myrem(6);
-  @include mq(md) {}
+  margin-top: myrem(-15);
+  margin-left: myrem(7);
+  @include mq(md) {
+    margin-top: myrem(3);
+    margin-left: myrem(-4);
+
+  }
 }
 
 .c-banner-price--lightblue .c-banner-price__total {
-  // left: myrem(4);
+  
   @include mq(md) {
     
   }
@@ -314,9 +352,16 @@
 
 .c-banner-price__total-price {
   font-size: myrem(22);
-
   @include mq(md) {
     font-size: myrem(26);
+    margin-top: myrem(-10);
+  }
+}
+
+.c-banner-price--lightblue .c-banner-price__total-price {
+  @include mq(md) {
+    margin-top: myrem(7);
+    margin-left: myrem(26);
   }
 }
 
@@ -346,9 +391,9 @@
 
 // 注釈
 .c-banner__annotation {
-  margin-top: myrem(16);
+  margin-top: myrem(14);
   @include mq(md) {
-    
+    margin-left: myrem(166);
   }
 }
 
@@ -357,9 +402,15 @@
   font-family: $font-sub;
   font-weight: 400;
   line-height: calc(21 / 13);
+  letter-spacing: .03em;
+  @include mq(md) {
+    letter-spacing: .03em;
+  }
+}
+
+.c-banner__annotation-text--bottom {
   letter-spacing: 0;
   @include mq(md) {
-    
   }
 }
 

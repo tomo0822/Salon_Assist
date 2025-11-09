@@ -1,0 +1,298 @@
+@use "global" as *;
+
+.c-card05 {
+  min-height: myrem(522);
+  margin-bottom: myrem(18);
+  @include mq(md) {
+    max-width: myrem(1000);
+  }
+}
+
+.c-card05-table {
+  border-collapse: collapse;
+  @include mq(md) {
+    
+  }
+}
+
+.c-card05-table__head  {
+
+  @include mq(md) {
+    
+  }
+}
+
+.c-card05-table__col {
+  font-size: myrem(14);
+  line-height: calc(18 / 14);
+  font-weight: 900;
+  color: $white;
+  white-space: nowrap;
+  padding-block: myrem(7) myrem(6);
+  padding-inline: myrem(31) myrem(12);
+  text-align: left;
+  position: relative;
+  @include mq(md) {
+    font-size: myrem(20);
+    line-height: calc(27 / 20);
+    padding-block: myrem(20) myrem(15);
+    padding-inline: myrem(60) myrem(32);
+  }
+}
+
+.c-card05-table__col--assist {
+  background: $pink1;
+  padding-block: myrem(8) myrem(8);
+  @include mq(md) {
+    padding-block: myrem(14) myrem(14);
+  }
+}
+
+.c-card05-table__col--center,
+.c-card05-table__col--right {
+  position: relative;
+  @include mq(md) {
+    
+  }
+}
+
+.c-card05-table__col--right {
+  @include mq(md) {
+    padding-inline: myrem(52) myrem(24);
+  }
+}
+
+.c-card05-table__col--center::before,
+.c-card05-table__col--right::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: myrem(3);
+  width: calc(100% - myrem(5));
+  height: 100%;
+  background: $lightblue1;
+  z-index: -1;
+  @include mq(md) {
+    
+  }
+}
+
+.c-card05-table__col--right::before {
+  width: 100%;
+  left: myrem(0);
+  @include mq(md) {
+    
+  }
+}
+
+.c-card05-table__col--gray {
+  background: $gray1;
+  @include mq(md) {
+    
+  }
+}
+
+.c-card05-table__body tr {
+  margin-top: myrem(3);
+  @include mq(md) {
+    
+  }
+}
+
+.c-card05-table__body tr:first-of-type {
+  margin-top: 0;
+  @include mq(md) {
+    
+  }
+}
+
+.c-card05-table__body td:first-of-type {
+  position: relative;
+  @include mq(md) {
+    
+  }
+}
+
+.c-card05-table__body th {
+  font-size: myrem(14);
+  font-weight: 900;
+  line-height: calc(12.5 / 14);
+  color: $white;
+  white-space: nowrap;
+  background: $gray2;
+  width: myrem(91);
+  height: myrem(78);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid $gray3;
+  border-left: 3px solid $gray3;
+  border-right: 3px solid $gray3;
+  @include mq(md) {
+    font-size: myrem(18);
+    line-height: calc(20 / 18);
+    width: myrem(146);
+    height: myrem(125);
+    border-top: 5px solid $gray3;
+    border-left: 5px solid $gray3;
+    border-right: 5px solid $gray3;
+  }
+}
+
+.c-card05-table__body tr:last-of-type th {
+  line-height: calc(16 / 14);
+  border-bottom: 3px solid $gray3;
+  @include mq(md) {
+    line-height: calc(20 / 18);
+    border-bottom: 5px solid $gray3;
+  }
+}
+
+.c-card05-table td {
+  font-size: myrem(10);
+  font-family: $font-sub;
+  line-height: calc(14 / 10);
+  text-align: center;
+  position: relative;
+  @include mq(md) {
+    font-size: myrem(13);
+    line-height: calc(20 / 13);
+  }
+}
+
+.c-card05-table__body td:first-of-type,
+.c-card05-table__head th:first-child {
+  padding-right: myrem(3);
+  @include mq(md) {
+    
+  }
+}
+
+.c-card05-table__body td::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 3px solid $gray3;
+  border-left: 3px solid $gray3;
+  border-right: 3px solid $gray3;
+  @include mq(md) {
+    border-top: 5px solid $gray3;
+    border-left: 5px solid $gray3;
+    border-right: 5px solid $gray3;
+    
+  }
+}
+
+.c-card05-table__body tr:last-of-type td::before {
+  border-bottom: 3px solid $gray3;
+  @include mq(md) {
+    border-bottom: 5px solid $gray3;
+    
+  }
+}
+
+.c-card05-table__body td:first-of-type::before {
+  border-top: none;
+  border-left: 3px solid $pink1;
+  border-right: 3px solid $pink1;
+  background: $pink3;
+  @include mq(md) {
+    border-left: 5px solid $pink1;
+    border-right: 5px solid $pink1;
+    
+  }
+}
+
+.c-card05-table__body td:first-of-type::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: myrem(-3);
+  left: myrem(2.5);
+  width: calc(100% - myrem(5));
+  height: myrem(3);
+  background: $gray3;
+  z-index: 1;
+  @include mq(md) {
+    bottom: myrem(-5);
+    left: myrem(5);
+    width: calc(100% - myrem(10));
+    height: myrem(5);
+  }
+}
+
+.c-card05-table__body tr:last-of-type td:first-of-type::after {
+  background: $pink1;
+  @include mq(md) {
+    background: transparent;
+  }
+}
+
+.c-card05-table__body td:nth-of-type(3)::before {
+  border-left: none;
+  @include mq(md) {
+    
+  }
+}
+
+.c-card05-table tr:first-of-type td:first-of-type::before {
+  border-top: 3px solid $pink1;
+  @include mq(md) {
+    border-top: 5px solid $pink1;
+    
+  }
+}
+
+.c-card05-table tr:last-of-type td::before {
+  height: calc(100% + 3px);
+  @include mq(md) {
+    height: calc(100% + 5px);
+    
+  }
+}
+
+.c-card05-table tr:last-of-type td:first-of-type::before {
+  border-bottom: 3px solid $pink1;
+  @include mq(md) {
+    border-bottom: 5px solid $pink1;
+    
+  }
+}
+
+.c-card05-table__image {
+  aspect-ratio: 1 / 1;
+  width: myrem(24);
+  margin-inline: auto;
+  position: relative;
+  @include mq(md) {
+    width: myrem(38);
+  }
+}
+
+.c-card05-table__image img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: myrem(6);
+  left: myrem(2);
+  @include mq(md) {
+    top: myrem(2);
+    left: myrem(1);
+  }
+}
+
+.c-card05-table__text {
+  margin-top: myrem(13);
+  position: sticky;
+  z-index: 1;
+  @include mq(md) {
+    
+  }
+}
+

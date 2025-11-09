@@ -10,26 +10,6 @@
   }
 }
 
-.c-banner {
-  position: relative;
-  background-color: #c8a63e;
-  color: #fff;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 14px 100px;
-  text-align: center;
-  line-height: 1.4;
-  mask-image: radial-gradient(circle 6px at top left, #000 6px, transparent 7px),
-    radial-gradient(circle 6px at top right, #000 6px, transparent 7px),
-    radial-gradient(circle 6px at bottom left, #000 6px, transparent 7px),
-    radial-gradient(circle 6px at bottom right, #000 6px, transparent 7px),
-    linear-gradient(black, #000);
-  mask-repeat: no-repeat;
-  mask-position: top left, top right, bottom left, bottom right, center;
-  mask-size: 12px 12px, 12px 12px, 12px 12px, 12px 12px, 100% 100%;
-  mask-composite: exclude, exclude, exclude, exclude, add;
-}
-
 .p-parts {
   margin-top: 50px;
 }

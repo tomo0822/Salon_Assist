@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.p-card04 {
+  display: flex;
+  flex-direction: column;
+  gap: myrem(25);
+  margin-top: myrem(30);
+  margin-bottom: 30px;
+  @include mq(md) {
+    flex-direction: row-reverse;
+    gap: myrem(38);
+    margin-top: myrem(60);
+  }
+}

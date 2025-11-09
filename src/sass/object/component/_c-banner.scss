@@ -1,0 +1,61 @@
+@use "global" as *;
+
+.c-banner {
+  font-size: myrem(20);
+  font-weight: 900;
+  color: #fff;
+  white-space: nowrap;
+  position: relative;
+  background-color: #c8a63e;
+  padding: myrem(14) 0;
+  text-align: center;
+  line-height: 1.4;
+  mask-image: radial-gradient(circle 6px at top left, #000 6px, transparent 7px),
+    radial-gradient(circle 6px at top right, #000 6px, transparent 7px),
+    radial-gradient(circle 6px at bottom left, #000 6px, transparent 7px),
+    radial-gradient(circle 6px at bottom right, #000 6px, transparent 7px),
+    linear-gradient(black, #000);
+  mask-repeat: no-repeat;
+  mask-position: top left, top right, bottom left, bottom right, center;
+  mask-size: 12px 12px, 12px 12px, 12px 12px, 12px 12px, 100% 100%;
+  mask-composite: exclude, exclude, exclude, exclude, add;
+  @include mq(md) {
+    font-size: myrem(38);
+    padding: myrem(19) 0;
+    mask-image: radial-gradient(circle 12px at top left, #000 12px, transparent 13px),
+    radial-gradient(circle 12px at top right, #000 12px, transparent 13px),
+    radial-gradient(circle 12px at bottom left, #000 12px, transparent 13px),
+    radial-gradient(circle 12px at bottom right, #000 12px, transparent 13px),
+    linear-gradient(black, #000);
+    mask-size: 24px 24px, 24px 24px, 24px 24px, 24px 24px, 100% 100%;
+  }
+}
+
+.c-banner::before,
+.c-banner::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 90%;
+  height: myrem(2);
+  border-top: 2px dotted $white;
+  @include mq(md) {
+    width: 95%;
+  }
+}
+
+.c-banner::before {
+  top: myrem(6);
+  @include mq(md) {
+    top: myrem(10);
+  }
+}
+
+.c-banner::after {
+  bottom: myrem(6);
+  @include mq(md) {
+    bottom: myrem(7);
+  }
+}

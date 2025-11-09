@@ -1,0 +1,140 @@
+@use "global" as *;
+
+.c-card04 {
+  background: $white;
+  padding: myrem(8) myrem(15) myrem(26);
+  @include mq(md) {
+    padding: myrem(12) myrem(34) myrem(26);
+    
+  }
+}
+
+.c-card04--medical {
+  padding: myrem(8) myrem(15) myrem(15);
+  @include mq(md) {
+    padding: myrem(12) myrem(34) myrem(15);
+    
+  }
+}
+
+.c-card04--esthetic {
+
+  @include mq(md) {
+    
+  }
+}
+
+.c-card04__label {
+  @include mq(md) {
+    
+  }
+}
+
+.card04__label-text {
+  font-weight: 900;
+  color: $white;
+  background: $lightblue3;
+  display: inline;
+  padding-inline: myrem(7) myrem(10);
+  padding-bottom: myrem(2);
+  @include mq(md) {
+    font-size: myrem(18);
+    padding-block: myrem(1) myrem(3);
+    padding-inline: myrem(3) myrem(5);
+  }
+}
+
+.c-card04--medical .card04__label-text {
+  background: $pink1;
+  @include mq(md) {
+    padding-inline: myrem(10) myrem(12);
+    
+  }
+}
+
+.c-card04__image {
+  display: flex;
+  justify-content: center;
+  margin-top: myrem(2);
+  @include mq(md) {
+    
+  }
+}
+
+.c-card04__image picture {
+  @include mq(md) {
+    
+  }
+}
+
+.c-card04__image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+
+  @include mq(md) {
+    
+  }
+}
+
+.c-card04__text-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: myrem(-1);
+  @include mq(md) {
+    margin-top: myrem(-5);
+  }
+}
+
+.c-card04__text {
+  font-size: myrem(10);
+  font-family: $font-sub;
+  line-height: calc(14.3 / 10);
+  text-align: center;
+  @include mq(md) {
+    font-size: myrem(13);
+    line-height: calc(19 / 13);
+  }
+}
+
+.c-card04--esthetic .c-card04__text--left {
+  @include mq(md) {
+    margin-left: myrem(-6);
+  }
+}
+
+.c-card04--medical .c-card04__text--left {
+  margin-left: myrem(-5);
+  @include mq(md) {
+    margin-left: myrem(-11);
+  }
+}
+
+.c-card04__text--center {
+  margin-left: myrem(5);
+  @include mq(md) {
+    
+  }
+}
+
+.c-card04--medical .c-card04__text--center {
+  margin-left: 1px;
+  @include mq(md) {
+    
+  }
+}
+
+.c-card04__text--right {
+  line-height: calc(13.55 / 10);
+  margin-left: myrem(8);
+  @include mq(md) {
+    line-height: calc(18 / 13);
+    margin-left: myrem(8);
+  }
+}
+
+.c-card04--esthetic .c-card04__text--right {
+  @include mq(md) {
+    margin-left: myrem(19);
+  }
+}

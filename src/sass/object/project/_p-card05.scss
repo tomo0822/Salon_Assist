@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.p-card05 {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  overflow-x: auto;
+  display: block;
+  // margin-left: myrem(15);
+  @include mq(md) {
+    display: flex;
+    justify-content: center;
+    margin-left: myrem(0);
+    overflow-x: visible;
+  }
+}
+
+.p-card05::-webkit-scrollbar {
+  width: 100%;
+  height: myrem(10);
+  @include mq(md) {
+    
+  }
+}
+
+.p-card05::-webkit-scrollbar-track {
+    background: $white; /* スクロールバーの背景色 */
+    border-radius: 5px; /* 角丸にする */
+    @include mq(md) {
+      
+    }
+}
+
+.p-card05::-webkit-scrollbar-thumb {
+    background: $pink1; /* スクロールバーの操作部分の背景色 */
+    border-radius: 5px; /* 角丸にする */
+}
