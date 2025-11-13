@@ -35,6 +35,12 @@ jQuery(function ($) {
     return false;
   });
 
+  // ハンバーガーメニュー
+  $('.js-humbarger').on('click', function() {
+    $('.p-header__humbarger').toggleClass('is-active');
+    $('.p-header__nav').toggleClass('is-active');
+  });
+
   // アコーディオンメニュー
   $(document).ready(function() {
   $('.js-accordion').on('click', function() {
