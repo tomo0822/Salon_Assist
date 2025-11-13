@@ -1,37 +1,179 @@
 @use "global" as *;
 
 .c-card06 {
-
+  counter-increment: card06;
+  background: $white;
+  border: 2px solid $yellow1;
+  padding-bottom: myrem(10);
+  position: relative;
   @include mq(md) {
-    
+    padding-bottom: myrem(12);
   }
 }
 
-.c-card06__label {
-
+.c-card06:nth-of-type(4) {
   @include mq(md) {
-    
+    padding-bottom: myrem(7);
+  }
+}
+
+.c-card06::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: myrem(-30);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: myrem(16) myrem(20) 0 myrem(20);
+  border-color: $pink1 transparent transparent transparent;
+  @include mq(md) {
+    bottom: myrem(-42);
+    border-width: myrem(20) myrem(26) 0 myrem(26);
+    border-color: $pink1 transparent transparent transparent;
+  }
+}
+
+.c-card06:last-of-type::after {
+  display: none;
+}
+
+.c-card06__label {
+  display: flex;
+  align-items: center;
+  gap: myrem(23);
+  @include mq(md) {
+    gap: myrem(42);
+  }
+}
+
+.c-card06:first-of-type .c-card06__label {
+  @include mq(md) {
+    gap: myrem(44);
+  }
+}
+
+.c-card06__label-wrapper {
+  font-size: myrem(11);
+  font-family: $font-title;
+  color: $white;
+  background: $pink1;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding-inline: myrem(13) myrem(26);
+  padding-block: myrem(3) myrem(3);
+  @include mq(md) {
+    font-size: myrem(15);
+    padding-block: myrem(4) myrem(4);
+    padding-inline: myrem(19) myrem(34);
+  }
+}
+
+.c-card06__label-wrapper::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: myrem(7);
+  width: myrem(10);
+  height: myrem(1);
+  background: $white;
+  z-index: 1;
+  @include mq(md) {
+    right: myrem(11);
+    width: myrem(12);
+  }
+}
+
+.c-card06__label-wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  transform: translateX(100%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: myrem(17) 0 myrem(17) myrem(15);
+  border-color: transparent transparent transparent $pink1;
+  @include mq(md) {
+    border-width: myrem(24) 0 myrem(24) myrem(20);
+    border-color: transparent transparent transparent $pink1;
   }
 }
 
 .c-card06__label-text {
-
+  letter-spacing: 0.1em;
+  margin-top: myrem(6);
   @include mq(md) {
-    
+    margin-top: 0;
+  }
+}
+
+.c-card06__label-number::before {
+  content: "" counter(card06, decimal-leading-zero);
+  font-size: myrem(26);
+  line-height: 1;
+  display: block;
+  margin-left: myrem(4);
+  @include mq(md) {
+    font-size: myrem(40);
+    position: relative;
+    top: myrem(-5);
   }
 }
 
 .c-card06__title {
-
+  font-size: myrem(17);
+  font-weight: 900;
+  color: $pink1;
+  margin-top: myrem(5);
   @include mq(md) {
-    
+    font-size: myrem(20);
+    margin-top: myrem(8);
+  }
+}
+
+.c-card06:nth-of-type(3) .c-card06__title {
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.c-card06:nth-of-type(5) .c-card06__title {
+  @include mq(md) {
+    margin-top: myrem(4);
   }
 }
 
 .c-card06__text {
-
+  font-size: myrem(16);
+  line-height: calc(22 / 16);
+  margin-top: myrem(5);
+  padding-inline: myrem(13) myrem(18);
   @include mq(md) {
-    
+    line-height: calc(28 / 16);
+    margin-top: 0;
+    padding-inline: myrem(188) myrem(18);
   }
 }
 
+.c-card06:nth-of-type(3) .c-card06__text {
+  @include mq(md) {
+    margin-top: myrem(-9);
+  }
+}
+
+.c-card06:nth-of-type(4) .c-card06__text {
+  @include mq(md) {
+    margin-top: myrem(-6);
+  }
+}
+
+.c-card06:nth-of-type(5) .c-card06__text {
+  @include mq(md) {
+    margin-top: myrem(-8);
+  }
+}

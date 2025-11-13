@@ -1,9 +1,13 @@
 @use "global" as *;
 
 .p-card06 {
-
+  display: flex;
+  flex-direction: column;
+  gap: myrem(43);
+  margin-top: myrem(50);
   @include mq(md) {
-    
+    gap: myrem(57);
+    margin-top: myrem(85);
   }
 }
 
@@ -14,7 +18,7 @@
   text-align: center;
   position: relative;
   @include mq(md) {
-    
+    font-size: myrem(38);
   }
 }
 
@@ -28,7 +32,11 @@
   height: myrem(106);
   background: url(../images/flow/sp/flow01-sp.png) no-repeat 100% / cover;
   @include mq(md) {
-    
+    top: myrem(-180);
+    left: myrem(-53);
+    width: myrem(258);
+    height: myrem(262);
+    background: url(../images/flow/pc/flow01-pc.png) no-repeat 100% / cover;
   }
 }
 
@@ -43,6 +51,9 @@
   height: myrem(10);
   background: url(../images/flow/sp/flow02-sp.png) no-repeat 100% / contain;
   @include mq(md) {
-    
+    top: myrem(63);
+    width: myrem(400);
+    height: myrem(20);
+    background: url(../images/flow/pc/flow02-pc.png) no-repeat 100% / contain;
   }
 }

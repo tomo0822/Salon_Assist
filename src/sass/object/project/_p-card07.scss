@@ -1,0 +1,114 @@
+@use "global" as *;
+
+.p-faq-title {
+  margin-top: 50px;
+  @include mq(md) {
+    
+  }
+}
+
+.p-card07 {
+  display: flex;
+  flex-direction: column;
+  gap: myrem(16);
+  margin-top: myrem(26);
+  @include mq(md) {
+    margin-top: myrem(50);
+    
+  }
+}
+
+.p-card07__title-faq {
+  font-size: myrem(29);
+  font-family: $font-title;
+  color: rgba($pink4, $alpha: 0.6);
+  text-align: center;
+  margin-left: myrem(8);
+  @include mq(md) {
+    font-size: myrem(70);
+    margin-left: myrem(17);
+  }
+}
+
+
+.p-card07__title-faq--left,
+.p-card07__title-faq--right {
+  font-size: myrem(41);
+  position: relative;
+  transform: skewX(-3deg);
+  display: inline-block;
+  @include mq(md) {
+    font-size: myrem(100);
+    
+  }
+}
+
+.p-card07__title-faq--left {
+  top: myrem(-4);
+  left: myrem(-8);
+  @include mq(md) {
+    top: myrem(-11);
+    left: myrem(-16);
+  }
+}
+
+.p-card07__title-faq--right {
+  top: myrem(6);
+  right: myrem(-5);
+  @include mq(md) {    
+    top: myrem(12);
+    right: myrem(-11);
+  }
+}
+
+.p-card07__title {
+  font-size: myrem(18);
+  font-weight: 900;
+  color: $pink4;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: myrem(7);
+  margin-top: myrem(3);
+  @include mq(md) {
+    font-size: myrem(38);
+    gap: myrem(26);
+    margin-top: myrem(-4);
+    margin-left: 0;
+  }
+}
+
+.p-card07__title span {
+  // margin-left: myrem(-9);
+  @include mq(md) {
+    
+  }
+}
+
+.p-card07__title::before,
+.p-card07__title::after {
+  content: "";
+  display: block;
+  height: myrem(5);
+  background-image: repeating-linear-gradient(
+    -75deg,
+    transparent,
+    transparent myrem(3),
+    #ccaf3a myrem(5),
+    #ccaf3a myrem(-2)
+    );
+    background-size: myrem(6) myrem(6);
+    flex: 1;
+    @include mq(md) {
+      height: myrem(7);
+      background-image: repeating-linear-gradient(
+        -60deg,
+        transparent,
+        transparent myrem(3),
+        #ccaf3a myrem(5),
+        #ccaf3a myrem(-2)
+        );
+        background-size: myrem(6) myrem(7);
+    }
+}
+

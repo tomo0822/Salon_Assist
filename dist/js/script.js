@@ -35,4 +35,21 @@ jQuery(function ($) {
     return false;
   });
 
+  // アコーディオンメニュー
+  $(document).ready(function() {
+  $('.js-accordion').on('click', function() {
+    $(this).toggleClass('is-open');
+    $(this).next('.c-card07__answer').slideToggle();
+  });
+
+  // 最初の要素を開いた状態にする
+  const $firstAccordion = $('.js-accordion').first();
+  $firstAccordion.addClass('is-open');
+  $firstAccordion.next('.c-card07__answer').css({
+    display: 'block',      // ← 確実に見せる
+    height: 'auto'         // ← slideToggle対策
+  });
+});
+
+
 });

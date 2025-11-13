@@ -1,0 +1,143 @@
+@use "global" as *;
+
+.c-card07 {
+  padding-inline: myrem(16) myrem(16);
+  background: $pink-question;
+  @include mq(md) {
+    padding-inline: myrem(25) myrem(25);
+  }
+}
+
+.c-card07__question {
+  font-size: myrem(16);
+  font-weight: 900;
+  line-height: calc(22 / 16);
+  display: flex;
+  align-items: center;
+  gap: myrem(7);
+  padding-block: myrem(15) myrem(13);
+  @include mq(md) {
+    gap: myrem(23);
+    padding-block: myrem(19) myrem(14);
+    
+  }
+}
+
+.c-card07__question-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: myrem(32);
+  height: myrem(32);
+  border-radius: 50%;
+  background: $pink1;
+  @include mq(md) {
+    width: myrem(52);
+    height: myrem(52);
+    
+  }
+}
+
+.c-card07__question-text {
+  flex: 1;
+  @include mq(md) {
+    
+  }
+}
+
+.c-card07__question-circle::before {
+  content: "Q";
+  font-size: myrem(18);
+  font-family: $font-title;
+  font-weight: 400;
+  color: $white;
+  @include mq(md) {
+    font-size: myrem(27);
+    
+  }
+}
+
+.c-card07__question-symbol {
+  position: relative;
+  @include mq(md) {
+    
+  }
+}
+
+.c-card07__question-symbol::before,
+.c-card07__question-symbol::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  background: $pink1;
+  width: myrem(16);
+  height: myrem(2);
+  border-radius: 9999px;
+  transition: all .3s;
+  @include mq(md) {
+    width: myrem(26);
+  }
+}
+
+.c-card07__question-symbol::after {
+  transform: rotate(90deg);
+
+  @include mq(md) {
+    
+  }
+}
+
+.c-card07__question.is-open .c-card07__question-symbol::after {
+  transform: rotate(0deg);
+
+  @include mq(md) {
+    
+  }
+}
+
+.c-card07__answer {
+  font-size: myrem(16);
+  font-weight: 900;
+  line-height: calc(22 / 16);
+  position: relative;
+  border-top: 1px solid $pink1;
+  padding-block: myrem(12) myrem(15);
+  display: none;
+  @include mq(md) {
+    padding-block: myrem(13) myrem(18);
+    
+  }
+}
+
+.c-card07__answer-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: myrem(7);
+  @include mq(md) {
+    align-items: center;
+    gap: myrem(23);
+  }
+}
+
+.c-card07__question-circle--answer {
+  background: $lightblue3;
+  @include mq(md) {
+    
+  }
+}
+
+.c-card07__question-circle--answer::before {
+  content: "A";
+  @include mq(md) {
+    
+  }
+}
+
+.c-card07__answer-text {
+  flex: 1;
+  @include mq(md) {
+    
+  }
+}
+
