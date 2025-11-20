@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.p-reason {
+  padding-block: myrem(13) myrem(60);
+  background: $pink3;
+  @include mq(md) {
+    padding-block: myrem(97) myrem(144);
+    
+  }
+}
+
+.p-reason__inner {
+
+  @include mq(md) {
+    
+  }
+}

@@ -1,0 +1,8 @@
+@use 'global' as *;
+
+.l-information {
+  margin-top: 0;
+  @include mq(md) {
+    margin-top: myrem(75);
+  }
+}

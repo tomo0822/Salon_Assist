@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .p-faq-title {
-  margin-top: 50px;
   @include mq(md) {
     
   }

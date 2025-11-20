@@ -7,8 +7,9 @@
   width: 100vw;
   height: myrem(60);
   background: $pink1;
+  z-index: 9999;
   @include mq(md) {
-    
+    height: 6.25vw;
   }
 }
 
@@ -19,28 +20,30 @@
   justify-content: space-between;
   @include mq(md) {
     justify-content: inherit;
+
   }
 }
 
 .p-header__logo {
   height: 100%;
-  margin-left: myrem(16);
+  margin-left: 4.25vw;
   @include mq(md) {
-    
+    margin-left: 8.33vw;
   }
 }
 
 .p-header__logo-text {
   font-size: myrem(22);
   font-family: $font-title;
-  font-weight: 500;
-  letter-spacing: .07em;
+  font-weight: 600;
+  letter-spacing: 0;
   color: $white;
+  white-space: nowrap;
   display: inline-block;
   height: 100%;
-  padding-block: myrem(5) myrem(5);
+  line-height: 6.25vw;
   @include mq(md) {
-    
+    font-size: 2.361vw;
   }
 }
 
@@ -119,6 +122,7 @@
   height: 100vh;
   margin-top: myrem(60);
   transition: all .5s;
+  background: $white;
   @include mq(md) {
     visibility: visible;
     opacity: 1;
@@ -148,8 +152,10 @@
   margin-left: myrem(40);
   @include mq(md) {
     flex-direction: row;
+    gap: myrem(10);
     margin-top: 0;
-    margin-left: 0;
+    // margin-left: myrem(80);
+    margin-left: 5.555vw;
   }
 }
 
@@ -161,11 +167,14 @@
 
 .p-header__item-link {
   font-size: myrem(16);
+  white-space: nowrap;
   padding: myrem(5);
   position: relative;
   transition: all .5s;
   @include mq(md) {
-    
+    // font-size: myrem(13);
+    font-size: 0.902vw;
+    color: $white;
   }
 }
 
@@ -178,56 +187,68 @@
   height: myrem(1);
   transition: all .5s;
   @include mq(md) {
-    
   }
 }
 
 .p-header__item-link:hover {
   color: $pink1;
   @include mq(md) {
-    
+    color: $white;
   }
 }
 
 .p-header__item-link:hover::before {
   background: $pink1;
   @include mq(md) {
-    
+    background: $white;
   }
 }
 
 .p-header__info {
-  
   @include mq(md) {
-    
+    letter-spacing: .03em;
+    color: $white;
+    margin-top: myrem(3);
+    margin-left: myrem(37);
   }
 }
 
 .p-header__info-wrapper {
-  
   @include mq(md) {
-    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: myrem(10);
+    padding-inline: myrem(10);
   }
 }
 
 .p-header_info-top {
-  
+  // font-size: myrem(22);
+  font-size: 1.527vw;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: myrem(5);
   @include mq(md) {
     
   }
 }
 
 .p-header__info-bottom {
-  
+  // font-size: myrem(14);
+  font-size: 0.972vw;
+  margin-top: myrem(-2);
   @include mq(md) {
     
   }
 }
 
 .p-header__btn {
-  
   @include mq(md) {
-    
+    margin-top: myrem(8);
+    margin-left: myrem(11)
   }
 }
 

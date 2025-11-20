@@ -2,20 +2,28 @@
 
 .c-banner-price {
   text-align: center;
+  margin-top: myrem(23);
   @include mq(md) {
+    margin-top: myrem(52);
 
+  }
+}
+
+.c-banner-price:nth-of-type(2) {
+  margin-top: myrem(37);
+  @include mq(md) {
+    margin-top: myrem(34);
+    
   }
 }
 
 .c-banner-price__copy {
   font-size: myrem(16);
   font-weight: 900;
-  margin-top: myrem(35);
   position: relative;
   display: inline-block;
   @include mq(md) {
     font-size: myrem(22);
-    margin-top: myrem(34);
   }
 }
 
@@ -64,7 +72,6 @@
 }
 
 .c-banner-price:first-of-type .c-banner-price__copy {
-  margin-top: 0;
   @include mq(md) {
 
   }
@@ -212,10 +219,13 @@
 
 .c-banner-price__row {
   display: flex;
+  justify-content: center;
   gap: myrem(7);
   margin-top: myrem(7);
+  margin-left: myrem(-15);
   @include mq(md) {
     margin-top: 0;
+    margin-left: 0;
   }
 }
 
@@ -272,6 +282,7 @@
 
 .c-banner-price__price {
   font-size: myrem(54);
+  font-weight: 900;
   color: $pink1;
   display: flex;
   align-items: center;
@@ -393,7 +404,7 @@
 .c-banner__annotation {
   margin-top: myrem(14);
   @include mq(md) {
-    margin-left: myrem(166);
+    margin-left: myrem(100);
   }
 }
 

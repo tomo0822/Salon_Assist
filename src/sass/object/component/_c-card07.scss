@@ -69,13 +69,14 @@
   content: "";
   display: block;
   position: absolute;
-  right: 0;
+  right: myrem(3);
   background: $pink1;
   width: myrem(16);
   height: myrem(2);
   border-radius: 9999px;
   transition: all .3s;
   @include mq(md) {
+    top: myrem(-3);
     width: myrem(26);
   }
 }

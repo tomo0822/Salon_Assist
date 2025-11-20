@@ -1,0 +1,251 @@
+@use "global" as *;
+
+.p-fv {
+  position: relative;
+  background: url(../images/fv/sp/fv01-sp.png) no-repeat 100% / cover;
+  background-position: myrem(-12) myrem(28);
+  width: 100%;
+  height: 100%;
+  margin-top: myrem(69);
+  padding-bottom: myrem(20);
+  aspect-ratio: auto;
+  @include mq(md) {
+    background: url(../images/fv/pc/fv01-pc.png) no-repeat 100% / cover;
+    background-position: myrem(-3) 0;
+    margin-top: 6.25vw;
+    padding-bottom: 0;
+    aspect-ratio: auto;
+  }
+}
+
+.p-fv__title {
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 362 / 59;
+  @include mq(md) {
+    width: 6.59vw;
+    aspect-ratio: 95 / 614;
+    position: absolute;
+    top: myrem(23);
+    // right: myrem(126);
+    right: 8.75vw;
+  }
+}
+
+.p-fv__inner {
+  @include mq(md) {
+    background: $pink-fv;
+    width: calc(520 / 1440 * 100%);
+    // margin-left: myrem(220);
+    margin-left: 15.277vw;
+    padding: 5.902vw 2.916vw 4.791vw;
+    box-shadow: -8px 0 8px -4px rgba(4, 0, 0, .2), 8px 0 8px -4px rgba(4, 0, 0, .2);
+  }
+}
+
+.p-fv__content {
+
+  @include mq(md) {
+  }
+}
+
+.p-fv__content-lead {
+  font-size: 4.266vw;
+  font-weight: 900;
+  line-height: calc(18 / 16);
+  letter-spacing: .05em;
+  color: $white;
+  background: $yellow1;
+  display: inline-block;
+  position: relative;
+  top: myrem(-9);
+  margin-top: myrem(-10);
+  margin-left: myrem(30);
+  padding-block: myrem(4) myrem(4);
+  padding-inline: myrem(26) myrem(24);
+  @include mq(md) {
+    font-size: 1.527vw;
+    top: 0;
+    margin-left: myrem(12);
+    padding-block: myrem(6) myrem(6);
+    padding-inline: myrem(18) myrem(18);
+  }
+}
+
+.p-fv__content-text {
+  font-size: 4.8vw;
+  font-weight: 900;
+  line-height: calc(23 / 18);
+  letter-spacing: .04em;
+  margin-top: myrem(-3);
+  margin-left: myrem(30);
+  @include mq(md) {
+    font-size: 1.527vw;
+    margin-top: myrem(8);
+    margin-left: myrem(17);
+  }
+}
+
+.p-fv__content-heading {
+  font-size: 11.733vw;
+  font-weight: 900;
+  line-height: calc(51 / 44);
+  letter-spacing: .01em;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-block;
+  margin-top: myrem(4);
+  margin-left: myrem(17);
+  @include mq(md) {
+    // font-size: myrem(68);
+    font-size: 4.722vw;
+    margin-top: myrem(14);
+    margin-left: myrem(13);
+  }
+}
+
+.p-fv__course-box {
+  margin-top: myrem(3);
+  @include mq(md) {
+    
+  }
+}
+
+.p-fv__course-box img {
+  display: block;
+  width: 47.9%;
+  margin-left: myrem(15);
+  @include mq(md) {
+    width: 94%;
+    margin-top: myrem(11);
+    margin-left: myrem(14);
+  }
+}
+
+.p-fv__text-box {
+
+  @include mq(md) {
+    display: flex;
+    gap: myrem(10);
+    margin-left: myrem(13);
+  }
+}
+
+.p-fv__text-wrapper {
+  font-weight: 900;
+  color: $yellow1;
+  margin-top: myrem(2);
+  @include mq(md) {
+    margin-top: myrem(5);
+    
+  }
+}
+
+.p-fv__text-number {
+  font-size: 6.933vw;
+  line-height: calc(39 / 26);
+  letter-spacing: .17em;
+  white-space: nowrap;
+  margin-left: myrem(69);
+  @include mq(md) {
+    font-size: 2.638vw;
+    margin-left: myrem(4);
+  }
+}
+
+.p-fv__text-number-small {
+  font-size: 3.2vw;
+  line-height: calc( 16 / 12);
+  letter-spacing: -.04em;
+  margin-top: myrem(-5);
+  margin-left: myrem(70);
+  @include mq(md) {
+    font-size: 1.319vw;
+    margin-top: myrem(-6);
+    margin-left: myrem(5);
+  }
+}
+
+.p-fv__text-price {
+  margin-top: myrem(8);
+  margin-left: myrem(9);
+  @include mq(md) {
+    margin-top: myrem(18);
+    margin-left: myrem(15);
+    
+  }
+}
+
+.p-fv__text-price .c-banner-price__price {
+  font-size: 12.8vw;
+  @include mq(md) {
+    font-size: 4.722vw;
+  }
+}
+
+.p-fv__text-price .c-banner-price__price--col {
+  font-size: 5.333vw;
+  position: relative;
+  margin-top: myrem(5);
+  margin-left: myrem(1);
+  @include mq(md) {
+    font-size: 1.944vw;
+    left: myrem(-4);
+    margin-top: myrem(10);
+    margin-left: myrem(1);
+  }
+}
+
+.p-fv__text-price .c-banner-price__unit {
+  margin-top: myrem(5);
+  margin-left: myrem(18);
+  @include mq(md) {
+    margin-top: myrem(5);
+    margin-left: myrem(33);
+    
+  }
+}
+
+.p-fv__text-price .c-banner-price__unit-tax {
+  font-size: 2.133vw;
+  @include mq(md) {
+    font-size: 0.902vw;
+    margin-bottom: myrem(3);
+  }
+}
+
+.p-fv__text-price .c-banner-price__unit-yen {
+  font-size: 6.4vw;
+  @include mq(md) {
+    font-size: 2.5vw;
+  }
+}
+
+.p-fv__card {
+  margin-top: myrem(1);
+  margin-left: myrem(17);
+  @include mq(md) {
+    margin-top: myrem(35);
+    margin-left: 0;
+  }
+}
+
+.p-fv__note {
+  margin-top: myrem(13);
+  @include mq(md) {
+    margin-top: myrem(37);
+  }
+}
+
+.p-fv__note-text {
+  font-size: 2.666vw;
+  font-weight: 100;
+  letter-spacing: .04em;
+  padding-inline: myrem(17) myrem(14);
+  @include mq(md) {
+    font-size: 0.833vw;
+    padding-inline: myrem(0);
+  }
+}
+
+

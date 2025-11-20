@@ -1,0 +1,79 @@
+@use "global" as *;
+
+.p-floating {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  opacity: 0;
+  transition: all .5s;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.p-floating.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.p-floating__wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.p-floating__left {
+  flex: 160;
+}
+
+.p-floating__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: myrem(15) myrem(20);
+  border: 2px solid $white;
+  border-radius: myrem(10) myrem(10) 0 0;
+}
+
+.p-floating__btn--tel {
+  background: $pink1;
+
+}
+
+.p-floating__btn-text {
+  font-size: myrem(18);
+  font-weight: 900;
+  color: $white;
+  text-align: center;
+}
+
+.p-floating__btn-text--tel {
+  display: flex;
+  align-items: center;
+  gap: myrem(5);
+  padding-block: myrem(5);
+}
+
+.p-floating__btn-text--tel::before {
+  content: "";
+  display: block;
+  background: url(../images/floating/floating01-sp.png) no-repeat 100% / cover;
+  width: myrem(18);
+  height: myrem(24);
+}
+
+.p-floating__right {
+  flex: 215;
+}
+
+.floating__btn--line {
+  background: $green1;
+}
+
+.p-floating__btn-text--line {
+  font-size: myrem(16);
+  font-weight: 900;
+  line-height: calc(22 / 16);
+}

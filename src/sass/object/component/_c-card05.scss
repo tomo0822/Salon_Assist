@@ -1,14 +1,17 @@
 @use "global" as *;
 
 .c-card05 {
+  width: 100%;
   min-height: myrem(522);
-  margin-bottom: myrem(18);
+  padding-bottom: myrem(23);
   @include mq(md) {
     max-width: myrem(1000);
+    padding-bottom: 0;
   }
 }
 
 .c-card05-table {
+  width: 100%;
   border-collapse: collapse;
   @include mq(md) {
     
@@ -27,16 +30,16 @@
   line-height: calc(18 / 14);
   font-weight: 900;
   color: $white;
+  text-align: left;
   white-space: nowrap;
   padding-block: myrem(7) myrem(6);
-  padding-inline: myrem(31) myrem(12);
-  text-align: left;
+  padding-inline: myrem(31) myrem(31);
   position: relative;
   @include mq(md) {
     font-size: myrem(20);
     line-height: calc(27 / 20);
     padding-block: myrem(20) myrem(15);
-    padding-inline: myrem(60) myrem(32);
+    padding-inline: myrem(60) myrem(60);
   }
 }
 
@@ -58,7 +61,7 @@
 
 .c-card05-table__col--right {
   @include mq(md) {
-    padding-inline: myrem(52) myrem(24);
+    padding-inline: myrem(52) myrem(52);
   }
 }
 
@@ -81,6 +84,13 @@
 .c-card05-table__col--right::before {
   width: 100%;
   left: myrem(0);
+  @include mq(md) {
+    
+  }
+}
+
+.c-card05-table__col--white {
+  background: $white;
   @include mq(md) {
     
   }
@@ -121,7 +131,7 @@
   color: $white;
   white-space: nowrap;
   background: $gray2;
-  width: myrem(91);
+  min-width: myrem(91);
   height: myrem(78);
   display: flex;
   justify-content: center;
@@ -132,7 +142,7 @@
   @include mq(md) {
     font-size: myrem(18);
     line-height: calc(20 / 18);
-    width: myrem(146);
+    min-width: myrem(146);
     height: myrem(125);
     border-top: 5px solid $gray3;
     border-left: 5px solid $gray3;
@@ -150,7 +160,7 @@
 }
 
 .c-card05-table td {
-  font-size: myrem(10);
+  font-size: clamp(0.625rem, 0.505rem + 0.51vw, 0.75rem);
   font-family: $font-sub;
   line-height: calc(14 / 10);
   text-align: center;

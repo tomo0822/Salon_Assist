@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.p-difference {
+  background-image: linear-gradient(to right, #d8f5f5, #d8f5f5 4px, #f3fcfc 4px, #f3fcfc);
+  background-size: 8px 100%;
+  padding-block: myrem(61) myrem(60);
+  @include mq(md) {
+    padding-block: myrem(112) myrem(120);
+    
+  }
+}

@@ -1,0 +1,8 @@
+@use 'global' as *;
+
+.l-faq {
+  margin-top: myrem(28);
+  @include mq(md) {
+    margin-top: myrem(34);
+  }
+}

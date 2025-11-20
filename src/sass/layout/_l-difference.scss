@@ -1,0 +1,8 @@
+@use 'global' as *;
+
+.l-difference {
+  margin-top: myrem(68);
+  @include mq(md) {
+    margin-top: myrem(134);
+  }
+}

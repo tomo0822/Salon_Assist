@@ -114,7 +114,7 @@
   position: relative;
   @include mq(md) {
     font-size: myrem(32);
-    padding-bottom: myrem(5);
+    padding-bottom: myrem(8);
     padding-inline: 0 myrem(10);
     top: myrem(-2);
     left: myrem(6);
@@ -146,7 +146,7 @@
     width: 100%;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: myrem(62) myrem(20);
-    padding-block: myrem(72) myrem(48);
+    padding-block: myrem(69) myrem(48);
     padding-inline: myrem(27) myrem(27);
   }
 }
@@ -156,8 +156,12 @@
   top: myrem(-53);
   right: myrem(-12);
   z-index: 10;
+  width: myrem(110);
+  aspect-ratio: 110 / 115;
   @include mq(md) {
     top: myrem(-70);
     right: myrem(172);
+    width: myrem(185);
+    aspect-ratio: 185 / 190;
   }
 }

@@ -9,7 +9,7 @@
 
 .c-btn01__wrapper {
   position: relative;
-  transition: transform .5s ease-out;
+  transition: transform 0.5s ease-out;
   @include mq(md) {
   }
 }
@@ -18,11 +18,10 @@
   transform: translateY(myrem(3));
   opacity: 1;
   @include mq(md) {
-    
   }
 }
 
-.c-btn01-text {
+.c-btn01__text {
   font-size: myrem(16);
   font-weight: 900;
   line-height: calc(21 / 16);
@@ -41,43 +40,68 @@
   }
 }
 
-.c-btn01-text::before {
+.c-btn01__text--header {
+  @include mq(md) {
+    font-size: 0.972vw;
+    line-height: calc(16.7 / 14);
+    padding-block: myrem(6) myrem(5);
+    padding-inline: myrem(28) myrem(48);
+  }
+}
+
+.c-btn01__text::before {
   content: "";
-    position: absolute;
-    top: myrem(-5);   // 上に少し広げる
-    left: 0;
-    right: 0;
-    bottom: myrem(-5); // 下に少し広げる
-    border-radius: inherit;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 185, 0, 0.7) 0%,
-      rgba(15, 129, 20, 1) 100%
-    );
-    z-index: -1;
-    transition: all .2s ease-out;
+  position: absolute;
+  top: myrem(-5); // 上に少し広げる
+  left: 0;
+  right: 0;
+  bottom: myrem(-5); // 下に少し広げる
+  border-radius: inherit;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 185, 0, 0.7) 0%,
+    rgba(15, 129, 20, 1) 100%
+  );
+  z-index: -1;
+  transition: all 0.2s ease-out;
   @include mq(md) {
     top: myrem(-9);
     bottom: myrem(-9);
   }
 }
 
-.c-btn01__wrapper:hover .c-btn01-text::before {
+.c-btn01__text--header::before {
+  @include mq(md) {
+    display: block;
+    width: calc(100% + 4px);
+    top: myrem(-4);
+    left: myrem(-2);
+    bottom: myrem(-4);
+    border: 2px solid $white;
+  }
+}
+
+.c-btn01__wrapper:hover .c-btn01__text::before {
   top: 0;
   bottom: 0;
   @include mq(md) {
-    
   }
 }
 
-.c-btn01-text span {
+.c-btn01__wrapper:hover .c-btn01__text--header::before {
+  @include mq(md) {
+    top: myrem(-1);
+    bottom: myrem(-1.5);
+  }
+}
+
+.c-btn01__text span {
   padding-inline: myrem(4) myrem(4);
   @include mq(md) {
-    padding-inline: myrem(8) myrem(8);
   }
 }
 
-.c-btn01-triangle {
+.c-btn01__triangle {
   display: block;
   width: myrem(17);
   height: myrem(25);
@@ -87,7 +111,7 @@
   transform: translateY(-50%);
   background: url(../images/btn/sp/btn01-triangle-sp.png) no-repeat 100% /
     contain;
-    transition: right .5s ease-out;
+  transition: right 0.5s ease-out;
   @include mq(md) {
     width: myrem(32);
     height: myrem(40);
@@ -98,10 +122,24 @@
   }
 }
 
-.c-btn01__wrapper:hover .c-btn01-triangle {
+.c-btn01__triangle--header {
+  @include mq(md) {
+    width: myrem(14);
+    height: myrem(20);
+    top: 50%;
+    right: myrem(18);
+  }
+}
+
+.c-btn01__wrapper:hover .c-btn01__triangle {
   right: myrem(25);
   @include mq(md) {
     right: myrem(50);
-    
+  }
+}
+
+.c-btn01__wrapper:hover .c-btn01__triangle--header {
+  @include mq(md) {
+    right: myrem(10);
   }
 }

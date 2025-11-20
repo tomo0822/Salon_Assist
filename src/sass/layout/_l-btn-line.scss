@@ -1,0 +1,8 @@
+@use 'global' as *;
+
+.l-btn-line {
+  margin-top: myrem(40);
+  @include mq(md) {
+    margin-top: myrem(61);
+  }
+}

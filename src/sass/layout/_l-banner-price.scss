@@ -1,0 +1,8 @@
+@use 'global' as *;
+
+.l-banner-price {
+  margin-top: myrem(60);
+  @include mq(md) {
+    margin-top: myrem(104);
+  }
+}

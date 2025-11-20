@@ -2,11 +2,15 @@
 
 .p-graph01 {
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: myrem(15);
+  margin-top: myrem(14);
   @include mq(md) {
     flex-direction: row;
     align-items: flex-end;
     gap: myrem(28);
+    margin-top: myrem(23);
+    margin-left: myrem(51);
   }
 }

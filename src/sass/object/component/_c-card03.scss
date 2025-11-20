@@ -3,6 +3,8 @@
 .c-card03 {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
   margin-top: myrem(40);
   @include mq(md) {
     margin-top: 0;
@@ -36,9 +38,11 @@
   border: 4px double $pink6;
   margin-top: myrem(12);
   padding: myrem(15) myrem(7) myrem(14) myrem(9);
+  display: flex;
+  flex-direction: column;
   @include mq(md) {
-    border: 6px double $pink6;
-    display: flex;
+    border: myrem(6) double $pink6;
+    flex-direction: row;
     gap: myrem(20);
     margin-top: 0;
     padding: myrem(26) myrem(14) myrem(19) myrem(17);
@@ -66,10 +70,25 @@
   top: myrem(-4);
   @include mq(md) {
     width: myrem(202);
-    height: myrem(6);
+    // height: myrem(6);
+    height: 0.416vw;
     border-right: 2px solid $pink6;
     border-left: 2px solid $pink6;
+    top: myrem(-5.5);
+  }
+}
+
+.c-card03__content::after {
+  content: "";
+  display: block;
+  background: $white;
+  position: absolute;
+  @include mq(md) {
+    width: myrem(199);
+    height: 1vw;
     top: myrem(-6);
+    left: myrem(16);
+    z-index: 0;
   }
 }
 
@@ -100,6 +119,7 @@
   letter-spacing: 0;
   position: absolute;
   top: myrem(-61);
+  z-index: 1;
   @include mq(md) {
     font-size: myrem(19);
     top: myrem(-91);
@@ -191,8 +211,10 @@
 .c-card03__image-pc {
 
   @include mq(md) {
-    margin-top: myrem(8);
     position: relative;
     left: myrem(-4);
+    aspect-ratio: 170 / 210;
+    width: myrem(170);
+    margin-top: myrem(8);
   }
 }

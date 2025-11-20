@@ -4,6 +4,7 @@
   display: flex;
   gap: myrem(10);
   @include mq(md) {
-    gap: myrem(12);
+    // gap: myrem(12);
+    justify-content: space-between;
   }
 }

@@ -1,0 +1,187 @@
+@use "global" as *;
+
+.p-trouble {
+  position: relative;
+  @include mq(md) {
+    
+  }
+}
+
+.p-trouble::after {
+  @include mq(md) {
+    content: "";
+    display: block;
+    position: absolute;
+    top: myrem(249);
+    background: url(../images/fv/pc/fv02-pc.png) no-repeat 100% / cover;
+    width: 100%;
+    aspect-ratio: 1440 / 829;
+    z-index: -1;
+  }
+}
+
+.p-trouble__inner {
+
+  @include mq(md) {
+    
+  }
+}
+
+.p-trouble__banner {
+  margin-top: myrem(28);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include mq(md) {
+    
+  }
+}
+
+.p-trouble__banner-text {
+  font-size: myrem(20);
+  font-weight: 900;
+  line-height: calc(28 / 20);
+  color: $pink1;
+  @include mq(md) {
+    font-size: myrem(27);
+    line-height: calc(35 / 27);
+  }
+}
+
+.p-trouble__banner-bar {
+  position: relative;
+  @include mq(md) {
+    
+  }
+}
+
+.p-trouble__banner-bar::before,
+.p-trouble__banner-bar::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: myrem(2);
+  height: myrem(57);
+  background: $pink1;
+  @include mq(md) {
+    height: myrem(70);
+    
+  }
+}
+
+.p-trouble__banner-bar--left:before,
+.p-trouble__banner-bar--left:after {
+  transform: rotate(-28deg);
+  @include mq(md) {
+    
+  }
+}
+
+.p-trouble__banner-bar--left:before {
+  top: myrem(5);
+  left: myrem(-65);
+  @include mq(md) {
+    top: myrem(7);
+    left: myrem(-93);
+  }
+}
+
+.p-trouble__banner-bar--left:after {
+  top: myrem(5);
+  left: myrem(-60);
+  @include mq(md) {
+    left: myrem(-83);
+  }
+}
+
+.p-trouble__banner-bar--right::before,
+.p-trouble__banner-bar--right::after {
+  transform: rotate(28deg);
+  top: myrem(-26);
+  @include mq(md) {
+    top: myrem(-30);
+  }
+}
+
+.p-trouble__banner-bar--right::before {
+  right: myrem(-25);
+  @include mq(md) {
+    right: myrem(-41);
+  }
+}
+
+.p-trouble__banner-bar--right::after {
+  right: myrem(-20);
+  @include mq(md) {
+    right: myrem(-31);
+  }
+}
+
+.p-trouble__banner-triangle {
+  display: inline-block;
+  width: myrem(345);
+  height: myrem(75);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0, rgba(224, 150, 185, .79) 50%, #cb4583 100%);
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  margin-top: myrem(25);
+  @include mq(md) {
+    width: myrem(400);
+    height: myrem(78);
+    margin-top: myrem(33);
+  }
+}
+
+.p-trouble__graph-wrapper {
+  margin-top: myrem(14);
+  @include mq(md) {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: myrem(22);
+    margin-left: myrem(53);
+  }
+}
+
+.p-trouble__graph-text {
+  font-size: myrem(16);
+  font-weight: 900;
+  letter-spacing: .02em;
+  text-align: center;
+  @include mq(md) {
+    font-size: myrem(28);
+  }
+}
+
+.p-trouble__graph-text--yellow {
+  font-size: myrem(36);
+  color: $yellow1;
+  display: inline-block;
+  margin-top: myrem(-2);
+  @include mq(md) {
+    font-size: myrem(60);
+    margin-top: myrem(-7);
+  }
+}
+
+.p-trouble__graph-text--pink {
+  font-size: myrem(30);
+  color: $pink1;
+  @include mq(md) {
+    font-size: myrem(53);
+  }
+}
+
+.p-trouble__annotation {
+  font-size: myrem(13);
+  font-family: $font-sub;
+  font-weight: 400;
+  letter-spacing: .02em;
+  text-align: right;
+  margin-top: myrem(12);
+  @include mq(md) {
+    text-align: left;
+    margin-top: myrem(18);
+    margin-left: myrem(50);
+  }
+}

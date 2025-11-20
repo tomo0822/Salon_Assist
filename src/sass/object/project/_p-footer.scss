@@ -1,0 +1,118 @@
+@use "global" as *;
+
+.p-footer {
+  background: $pink5;
+  padding-top: myrem(174);
+  padding-bottom: myrem(56);
+  @include mq(md) {
+    padding-top: myrem(360);
+    padding-bottom: myrem(38);
+  }
+}
+
+.p-footer__logo {
+  position: relative;
+  margin-left: myrem(-3);
+  @include mq(md) {
+    margin-left: myrem(-4);
+  }
+}
+
+.p-footer__logo::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: myrem(-15);
+  left: myrem(5);
+  width: 99%;
+  height: myrem(1);
+  background: $white;
+  @include mq(md) {
+    top: myrem(-21);
+    width: 100%;
+    height: myrem(2);
+  }
+}
+
+.p-footer__logo-text {
+  font-size: myrem(20);
+  font-family: $font-title;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: $white;
+  padding: myrem(5);
+  @include mq(md) {
+    font-size: myrem(40);
+  }
+}
+
+.p-footer__list-wrapper {
+  display: flex;
+  gap: myrem(81);
+  margin-top: myrem(30);
+  margin-left: myrem(10);
+  @include mq(md) {
+    justify-content: flex-end;
+    gap: myrem(68);
+    margin-top: myrem(-1);
+    margin-left: 0;
+  }
+}
+
+.p-footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: myrem(8);
+  @include mq(md) {
+    
+  }
+}
+
+.p-footer__list--left {
+
+  @include mq(md) {
+    
+  }
+}
+
+.p-footer__list--right {
+  margin-top: myrem(-2);
+  @include mq(md) {
+    margin-top: myrem(101);
+    margin-left: myrem(-5);
+    position: relative;
+    left: myrem(8);
+  }
+}
+
+.p-footer__item {
+
+  @include mq(md) {
+    
+  }
+}
+
+.p-footer__item-link {
+  font-size: myrem(14);
+  letter-spacing: .01em;
+  color: $white;
+  padding: myrem(5);
+  @include mq(md) {
+    font-size: myrem(16);
+  }
+}
+
+.p-footer__copy {
+  font-size: myrem(13);
+  letter-spacing: 0;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  margin-top: myrem(53);
+  @include mq(md) {
+    font-size: myrem(15);
+    margin-top: myrem(49);
+  }
+}
+
+
